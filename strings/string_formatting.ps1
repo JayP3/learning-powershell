@@ -16,8 +16,10 @@ Write-Host "I live in the state of $state, in the city $city."
 # Other ways to format strings
 # 2. .NET Format method. System.String.Format
 Write-Host "`r`n****Using the .NET String Format Method****"
-[string]::Format("I live in the state of {0}, in the city {1}.",$state, $city)
+$str = [string]::Format("I live in the state of {0}, in the city {1}.",$state, $city)
+Write-Host $str
 
 # 3. Powershell formatting. -f
 Write-Host "`r`n****Using Powershell String Formatting****"
-"I live in the state of {0}, in the city {1}." -f $state, $city
+$str = "I live in the state of {0}, in the city {1}." -f $state, $city
+Write-Host $str
